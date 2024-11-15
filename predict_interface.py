@@ -11,8 +11,8 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 
 # Пути
-model_path = './license_plate_model.h5'
-processed_data_path = './processed_data.pkl'
+model_path = '../../license_plate_model.h5'
+processed_data_path = '../../processed_data.pkl'
 
 # Алфавит
 alphabet = string.ascii_uppercase + string.digits
