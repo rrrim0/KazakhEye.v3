@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разпознавание автомабильных номеров</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="title">Распознавание государственных номеров</h1>
+            <p class="description">Загрузите изображение и получите результат</p>
+        </div>
+        <div class="container">
+            <label class="upload-section">
+                <span class="upload-label">Выбрать файл</span>
+                <input type="file" class="file-input" accept="image/*">
+                <button class="upload-btn">
+                    <img src="./img/icons/upload.svg" alt="">
+                </button>
+            </label>
+            <div class="image-icon">
+                <img src="./img/icons/image.svg" alt="image icon">
+            </div>
+            <div class="result-section">
+                <img class="loader" src="./img/icons/loader.svg" alt="loader">
+                <div class="image-preview" >
+                    <img class="uploaded-image" src="" alt="Uploaded Image">
+                </div>
+                <div class="info-section">
+                    <h3 class="info-title">Информация об автомобиле</h3>
+                    <div class="info-item">
+                        <div class="info-item-label">Номерной знак:</div>
+                        <div id="plate-number" class="info-item-value"></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-item-label">Регион:</div>
+                        <div id="region" class="info-item-value"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
