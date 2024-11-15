@@ -49,8 +49,8 @@ class PredictService:
         prediction = self.__model.predict(image)
         plate = ''.join([self.__idx_to_char[np.argmax(pred)] for pred in prediction[0]]).lower()
 
-        if "kz" not in plate:
-            return {"plate": plate}
+        # if "kz" not in plate:
+        #     return {"plate": plate}
 
         region = self.__regions.get(plate[-2:])
         return {"plate": plate, "region": region}
