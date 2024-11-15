@@ -1,3 +1,4 @@
 license_plate_model.h5 filter=lfs diff=lfs merge=lfs -text
 processed_data.pkl filter=lfs diff=lfs merge=lfs -text
 output.zip filter=lfs diff=lfs merge=lfs -text
+dataset.zip filter=lfs diff=lfs merge=lfs -text
