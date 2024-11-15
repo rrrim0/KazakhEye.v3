@@ -31,6 +31,46 @@ service = PredictService(
 
 
 async def predict(request):
+    """
+    ---
+    description: Predict based on an uploaded image
+    requestBody:
+      required: true
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              photo:
+                type: string
+                format: binary
+                description: The image file to be analyzed.
+    responses:
+      "200":
+        description: Prediction successful
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                plate:
+                  type: string
+                  description: Detected license plate.
+                region:
+                  type: string
+                  description: Detected region.
+      "500":
+        description: Prediction failed
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                error:
+                  type: string
+                  description: Error message explaining the issue.
+    """
+
     directory = None
     try:
         reader = await request.multipart()
